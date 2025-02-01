@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/main.css"> 
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+</head>
+<body>
+<header class="header">
+    <div class ="container">
+        <div class="header__inner">
+            <a class="logo">studsdb</a>
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="menu_list-item">
+                        <a class="menu_list-option">Опция 1</a> 
+                    <li class="menu_list-item">
+                        <a class="menu_list-option">Опция 2</a>
+                    </li>
+                    <li class="menu_list-item">
+                        <a class="menu_list-option">Опция 3</a>
+                    </li>
+                    <li class="menu_list-item">
+                        <a class="menu_list-option">Опция 4</a>
+                    </li>
+                    <form action="" method="get">
+                        <input class="search" type="search" placeholder="Search...">
+                        <button class="search_button" type="submit">Найти</button>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <hr class="hr1">
+</header>
+        <div class="sidebar">
+            <div class="sidebar_info">  
+                    <a href='/index' class="sidebar_text">Главная</a>
+                    <a href='/studs' class="sidebar_text">Студенты</a>
+                    <a href='/groups' class="sidebar_text">Группы</a>
+                    <a href='/marks' class="sidebar_text">Оценки</a>
+                    <a href='/others' class="sidebar_text">Прочее</a>
+            </div>
+            <div class="sidebar_adm">
+                <p> admin </p>
+                <p> Выход</p>
+            </div>
+        </div>
+<div class="content">
+{% block content %}
+{% endblock %}
+</div>
+</body>
+</html>
+

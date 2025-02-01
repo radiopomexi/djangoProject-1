@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'GreenHill';
+    src: url("../font/GreenHillSans-Regular v1.01.ttf");
+}
+:root {
+    --main-color: #253237;
+    --second-color: #5c6b73;
+}
+.header {
+    background-color: var(--second-color);
+    padding-top:0px;
+    padding-left: 0px;
+
+}
+.a {
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--second-color);
+    font-family: Bahnschrift;
+    font-weight: bold;
+    margin: 0;
+}
+
+.container {
+ max-width: 1980px;
+ padding: 0 15px;
+}
+
+.header__inner {
+ display: flex;
+ justify-content: space-between;
+margin-bottom: 0;
+ align-items: center;
+}
+
+.logo {
+    color: white;
+    font-family:GreenHill;
+    font-size: 17px;
+    margin-left: 15px;
+}
+
+.menu_list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.menu_list-item {
+    margin: 0px;
+
+}
+.menu_list-option {
+ position: relative;
+ color: white;
+ text-decoration: none;
+ cursor: pointer;
+ margin-right: 15px;
+}
+.hr1 {
+    background-color: var(--main-color);
+    border: none;
+    height: 3px;
+    margin: 0;
+}
+.search {
+    border: none;
+    font-family: Bahnschrift;
+    white-space: nowrap;
+}
+.sidebar {
+    background-color: var(--main-color);
+    float: left;
+    width: 450px;
+    height:730px;
+    overflow: auto;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content{
+    background-color: var(--second-color);
+    height: 720px;
+    margin-left:460px;
+    width: 1000px;
+}
+.sidebar_text {
+    margin-top: 25px;
+    margin-left: 30px;
+    text-decoration: none;
+    color:white;
+    width: 100px ;
+    flex-direction: column;
+    display: flex;
+}
+.index_hi {
+    color:white;
+    margin-top:5px;
+    margin-bottom: 0px;
+
+}
+.index_statistic {
+    color:white;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.index_decor {
+    display: flex;
+}
+.index_info {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+.index_info-text {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: white;
+}
+.sidebar_adm {
+    color: white;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    justify-content: end;
+}
+.search_button {
+    font-family: Bahnschrift;
+    color:white;
+    background-color: var(--main-color);
+    height: 21px;
+    border:none;
+    cursor: pointer ;
+}
+.index_hr {
+    background-color: #ffffff;
+    border: none;
+    height: 1px;
+}
