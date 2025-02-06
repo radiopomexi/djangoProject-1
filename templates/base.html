@@ -3,21 +3,21 @@
 <html lang="en">
 <head>
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-    <link rel="stylesheet" href="/static/css/main.css"> 
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/static/css/main.css">
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
 <header class="header">
-    <div class ="container">
+    <div class="container">
         <div class="header__inner">
             <a class="logo">studsdb</a>
             <nav class="menu">
                 <ul class="menu_list">
                     <li class="menu_list-item">
-                        <a class="menu_list-option">Опция 1</a> 
+                        <a class="menu_list-option">Опция 1</a>
                     <li class="menu_list-item">
                         <a class="menu_list-option">Опция 2</a>
                     </li>
@@ -28,37 +28,39 @@
                         <a class="menu_list-option">Опция 4</a>
                     </li>
                     <div class="wrapper">
-        <input type="checkbox" id="check" />
-        <form action="" class="search-box" method="get">
-            <input type="search" placeholder="Search..." />
-            <input type='submit' value='Search' class="search_button" />
-            <label for="check" class="btn">
-                <i class="fas fa-search"></i>
-            </label>
-        </form>
-    </div>
+                        <input type="checkbox" id="check"/>
+                        <form action="" class="search-box" method="get">
+                            <input type="search" placeholder="Search..."/>
+                            <input type='submit' value='Search' class="search_button"/>
+                            <label for="check" class="btn">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </form>
+                    </div>
                 </ul>
             </nav>
         </div>
     </div>
     <hr class="hr1">
 </header>
-        <div class="sidebar">
-            <div class="sidebar_info">  
-                    <a href='/index' class="sidebar_text">Главная</a>
-                    <a href='/studs' class="sidebar_text">Студенты</a>
-                    <a href='/groups' class="sidebar_text">Группы</a>
-                    <a href='/marks' class="sidebar_text">Оценки</a>
-                    <a href='/others' class="sidebar_text">Прочее</a>
-            </div>
-            <div class="sidebar_adm">
-                <p> admin </p>
-                <p> Выход</p>
-            </div>
-        </div>
+<div class="sidebar">
+    <div class="sidebar_info">
+        <a href='{% url 'index' %}' class="sidebar_text">Главная</a>
+        <a href='{% url 'studs' %}' class="sidebar_text">Студенты</a>
+        <a href='{% url 'groups' %}' class="sidebar_text">Группы</a>
+        <a href='{% url 'marks' %}' class="sidebar_text">Оценки</a>
+        <a href='{% url 'others' %}' class="sidebar_text">Прочее</a>
+    </div>
+    <div class="sidebar_adm">
+    <ul class="sidebar_adm">
+       <li><a href='#' class="sidebar_adm1"> admin </a></li>
+        <li><a href='#' class="sidebar_adm2"> Выход</a></li>
+    </ul>
+    </div>
+</div>
 <div class="content">
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
 </div>
 </body>
 </html>
